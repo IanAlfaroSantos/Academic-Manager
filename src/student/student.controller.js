@@ -84,6 +84,7 @@ export const register = async (req, res) => {
         console.log(error);
 
         return res.status(500).json({
+            success: false,
             msg: 'User registration failded',
             error: error.message
         })
@@ -124,6 +125,13 @@ export const getStudentById = async (req, res) => {
         const { id } = req.params;
 
         const student = await Student.findById(id);
+
+        if (student.estado === false) {
+            return res.status(400).json({
+                success: false,
+                message: 'El estudiante buscado no esta disponible'
+            })
+        }
 
         if (!student) {
             return res.status(400).json({

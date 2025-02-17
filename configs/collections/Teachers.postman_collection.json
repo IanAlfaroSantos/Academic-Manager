@@ -44,7 +44,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"ElmerSantos\",\r\n    \"email\": \"elmer@gmail.com\",\r\n    \"password\": \"11111119\"\r\n}",
+					"raw": "{\r\n    \"username\": \"ElmerSantos\",\r\n    \"email\": \"elmer@gmail.com\",\r\n    \"password\": \"11111111\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

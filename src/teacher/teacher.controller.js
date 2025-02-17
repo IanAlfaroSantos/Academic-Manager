@@ -125,6 +125,13 @@ export const getTeacherById = async (req, res) => {
 
         const teacher = await Teacher.findById(id);
 
+        if (teacher.estado === false) {
+            return res.status(400).json({
+                success: false,
+                message: 'El profesor buscado no esta disponible'
+            })
+        }
+
         if (!teacher) {
             return res.status(400).json({
                 success: false,
