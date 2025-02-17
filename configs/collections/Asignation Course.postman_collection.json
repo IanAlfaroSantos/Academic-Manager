@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "9f10fc29-3974-4f22-9999-0d82997df79f",
+		"name": "Asignation Course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41997069"
+	},
+	"item": [
+		{
+			"name": "Asignar Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlYWY0NjliNzFjZGMyMDIwODQ5NGUiLCJpYXQiOjE3Mzk4ODg0NzYsImV4cCI6MTczOTg5MjA3Nn0.cQrPdQy60c85ScKBPkP1V9do-0lIbFTem9P_qaJNiaY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pablo10@gmail.com\",\r\n    \"name\": \"Etica\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/asigned/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"asigned",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asignar Teacher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODBmOWEzMGNiMTRlNmI5N2E3YTUiLCJpYXQiOjE3Mzk4ODY3MTMsImV4cCI6MTczOTg5MDMxM30.fVeq_TZrCpSffhFNicD94R_HZ5XHvzGSCVziwGMdHoo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"elmer@gmail.com\",\r\n    \"name\": \"Etica\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/asigned/teacher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"asigned",
+						"teacher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Asignations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/asigned?limite=10&desde=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"asigned"
+					],
+					"query": [
+						{
+							"key": "limite",
+							"value": "10"
+						},
+						{
+							"key": "desde",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Asignations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/asigned/findAsigned/67b41cc733ec5a177b5aacde",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"asigned",
+						"findAsigned",
+						"67b41cc733ec5a177b5aacde"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Asignation Course",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"jose@gmail.com\",\r\n    \"name\": \"Matematicas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/asigned/67b41cc733ec5a177b5aacde",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"asigned",
+						"67b41cc733ec5a177b5aacde"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Courses Student and Teacher",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/asigned/courses/67ae80f9a30cb14e6b97a7a5?role=TEACHER_ROLE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"asigned",
+						"courses",
+						"67ae80f9a30cb14e6b97a7a5"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "TEACHER_ROLE"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "58132e2a-d46e-4559-83b9-30dcd05620ca",
+		"name": "Courses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41997069"
+	},
+	"item": [
+		{
+			"name": "Agregar Curso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODBmOWEzMGNiMTRlNmI5N2E3YTUiLCJpYXQiOjE3Mzk4NTE1MzIsImV4cCI6MTczOTg1NTEzMn0.bzHi5PiOuW-7pdXZgwOLNuppO0YhXYSR3bXchNvKF7E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Programacion\",\r\n    \"description\": \"Creacion de programas web\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/courses/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/courses?limite=10&desde=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "limite",
+							"value": "10"
+						},
+						{
+							"key": "desde",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/courses/findCourse/67b3a0e0ce6937c71f05d641",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"courses",
+						"findCourse",
+						"67b3a0e0ce6937c71f05d641"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Course",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODBmOWEzMGNiMTRlNmI5N2E3YTUiLCJpYXQiOjE3Mzk4ODY3MTMsImV4cCI6MTczOTg5MDMxM30.fVeq_TZrCpSffhFNicD94R_HZ5XHvzGSCVziwGMdHoo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Etica\",\r\n    \"description\": \"Curso de principios eticos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/courses/67b412f50f0637961cd89ef6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"courses",
+						"67b412f50f0637961cd89ef6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODBmOWEzMGNiMTRlNmI5N2E3YTUiLCJpYXQiOjE3Mzk4ODY3MTMsImV4cCI6MTczOTg5MDMxM30.fVeq_TZrCpSffhFNicD94R_HZ5XHvzGSCVziwGMdHoo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/courses/67b412f50f0637961cd89ef6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"courses",
+						"67b412f50f0637961cd89ef6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate Course",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlODBmOWEzMGNiMTRlNmI5N2E3YTUiLCJpYXQiOjE3Mzk4ODY3MTMsImV4cCI6MTczOTg5MDMxM30.fVeq_TZrCpSffhFNicD94R_HZ5XHvzGSCVziwGMdHoo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/courses/activate/67b412f50f0637961cd89ef6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"courses",
+						"activate",
+						"67b412f50f0637961cd89ef6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
