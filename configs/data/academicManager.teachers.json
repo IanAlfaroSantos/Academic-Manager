@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "67ae80f9a30cb14e6b97a7a5"
+  },
+  "name": "Elmer",
+  "surname": "Santos",
+  "username": "elmersantos",
+  "email": "elmer@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$6ll6O07i/I4cUeazVQLQzA$sAITWklIMwd8WhPQwxcJAZt7t6QbbTiC5CEgtzh2xjI",
+  "phone": "12423784",
+  "role": "TEACHER_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-13T23:32:09.321Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T23:32:09.321Z"
+  }
+}]
