@@ -5,6 +5,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
+import limiter from '../src/middlewares/validar-cant-peticiones.js';
 import roleRoutes from '../src/role/role.routes.js';
 import studentRoutes from '../src/student/student.routes.js'
 
@@ -14,6 +15,7 @@ const middlewares = (app) => {
     app.use(express.json());
     app.use(helmet());
     app.use(morgan('dev'));
+    app.use(limiter);
 }
 
 const routes = (app) => {
