@@ -1,13 +1,6 @@
 import { body } from 'express-validator';
 import { validarCampos } from './validar-campos.js'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { existenteEmailStudent } from '../helpers/db-validator.js'
-=======
-import { existenteEmailTeacher, existenteEmailStudent } from '../helpers/db-validator.js'
-=======
 import { existenteEmailTeacher, existenteEmailStudent, existenteNameCourse } from '../helpers/db-validator.js'
->>>>>>> feature/course
 
 export const registerValidatorTeacher = [
     body('name', 'The name is required').not().isEmpty(),
@@ -17,9 +10,6 @@ export const registerValidatorTeacher = [
     body('password', 'Password must be at least 8 characters').isLength({ min: 8 }),
     validarCampos
 ];
-<<<<<<< HEAD
->>>>>>> feature/teacher
-=======
 
 export const validatorNameCourse = [
     body('name', 'The name is required').not().isEmpty(),
@@ -27,7 +17,6 @@ export const validatorNameCourse = [
     body('description', 'The description is required').not().isEmpty(),
     validarCampos
 ];
->>>>>>> feature/course
 
 export const registerValidatorStudent = [
     body('name', 'The name is required').not().isEmpty(),

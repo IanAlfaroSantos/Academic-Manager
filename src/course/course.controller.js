@@ -1,4 +1,5 @@
 import Course from "./course.model.js"
+import AsignedCourse from "../asignarCourse/asignedCourse.model.js"
 import { response, request } from "express"
 
 export const saveCourse = async (req, res) => {
@@ -114,6 +115,13 @@ export const updateCourse = async (req, res = response) => {
 
         const updatedCourse = await Course.findByIdAndUpdate(id, data, { new: true });
 
+        if (course.name !== updatedCourse.name) {
+            await AsignedCourse.updateMany(
+                { course: id, role: "STUDENT_ROLE" },
+                { $set: { name: updatedCourse.name } }
+            );
+        }
+
         res.status(200).json({
             success: true,
             msg: 'Curso actualizado correctamente',
@@ -138,6 +146,8 @@ export const deleteCourse = async (req, res = response) => {
         const course = await Course.findByIdAndUpdate(id, { estado: false }, { new: true });
 
         const authenticatedCourse = req.course;
+
+        await AsignedCourse.deleteMany({ course: id, role: 'STUDENT_ROLE' });
 
         res.status(200).json({
             success: true,

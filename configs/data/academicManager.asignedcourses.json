@@ -1,0 +1,126 @@
+[{
+  "_id": {
+    "$oid": "67b497daf7154cac8cc0d330"
+  },
+  "student": {
+    "$oid": "67aeaf469b71cdc20208494e"
+  },
+  "email": "ialfasa2020@gmail.com",
+  "name": "matematicas",
+  "course": {
+    "$oid": "67b411fc067b251b302329e4"
+  },
+  "role": "STUDENT_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-17T14:23:22.119Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T14:23:22.119Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b497f2f7154cac8cc0d33a"
+  },
+  "student": {
+    "$oid": "67aeaf469b71cdc20208494e"
+  },
+  "email": "ialfasa2020@gmail.com",
+  "name": "ciencias naturales",
+  "course": {
+    "$oid": "67b411c9067b251b302329dc"
+  },
+  "role": "STUDENT_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-17T14:23:46.969Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T14:23:46.969Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4987ff7154cac8cc0d356"
+  },
+  "student": {
+    "$oid": "67ae80b6a30cb14e6b97a7a0"
+  },
+  "email": "pablo10@gmail.com",
+  "name": "artistica",
+  "course": {
+    "$oid": "67b411e7067b251b302329e0"
+  },
+  "role": "STUDENT_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-17T14:26:07.154Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T14:26:07.154Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b498c1f7154cac8cc0d366"
+  },
+  "email": "elmer@gmail.com",
+  "name": "matematicas",
+  "teacher": {
+    "$oid": "67ae80f9a30cb14e6b97a7a5"
+  },
+  "course": {
+    "$oid": "67b411fc067b251b302329e4"
+  },
+  "role": "TEACHER_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-17T14:27:13.213Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T14:27:13.213Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b498c8f7154cac8cc0d36c"
+  },
+  "email": "elmer@gmail.com",
+  "name": "etica",
+  "teacher": {
+    "$oid": "67ae80f9a30cb14e6b97a7a5"
+  },
+  "course": {
+    "$oid": "67b412f50f0637961cd89ef6"
+  },
+  "role": "TEACHER_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-17T14:27:20.660Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T14:27:20.660Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b49a36e4d0d6ab458772f8"
+  },
+  "student": {
+    "$oid": "67ae80b6a30cb14e6b97a7a0"
+  },
+  "email": "pablo10@gmail.com",
+  "name": "etica",
+  "course": {
+    "$oid": "67b412f50f0637961cd89ef6"
+  },
+  "role": "STUDENT_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-17T14:33:26.552Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T14:33:26.552Z"
+  }
+}]

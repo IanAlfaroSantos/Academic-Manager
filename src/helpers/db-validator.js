@@ -1,13 +1,7 @@
 import Student from '../student/student.model.js';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Teacher from '../teacher/teacher.model.js';
->>>>>>> feature/teacher
-=======
 import Teacher from '../teacher/teacher.model.js';
 import Course from '../course/course.model.js';
->>>>>>> feature/course
+import AsignedCourse from '../asignarCourse/asignedCourse.model.js';
 
 export const existenteEmailStudent = async (email = ' ') => {
 
@@ -18,19 +12,10 @@ export const existenteEmailStudent = async (email = ' ') => {
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export const existenteEmailTeacher = async (email = ' ') => {
-
-    const existeEmail = await Teacher.findOne({ email });
-
-=======
 export const existenteEmailTeacher = async (email = ' ') => {
     
     const existeEmail = await Teacher.findOne({ email });
     
->>>>>>> feature/course
     if (existeEmail) {
         throw new Error(`El email ${ email } ya existe en la base de datos`);
     }
@@ -39,26 +24,12 @@ export const existenteEmailTeacher = async (email = ' ') => {
 export const existeTeacherById = async (id = '') => {
     
     const existeTeacher = await Teacher.findById(id);
-<<<<<<< HEAD
-
-=======
     
->>>>>>> feature/course
     if (!existeTeacher) {
         throw new Error(`El ID ${ id } no existe en la base de datos`);
     }
 }
 
-<<<<<<< HEAD
->>>>>>> feature/teacher
-export const existeStudentById = async (id = '') => {
-    
-    const existeStudent = await Student.findById(id);
-
-    if (!existeStudent) {
-        throw new Error(`El ID ${ id } no existe en la base de datos`);
-    }
-=======
 export const existeStudentById = async (id = '') => {
     
     
@@ -78,6 +49,15 @@ export const existeCourseById = async (id = '') => {
     }
 }
 
+export const existeAsignedCourseById = async (id = '') => {
+    
+    const existeAsignedCourse = await AsignedCourse.findById(id);
+    
+    if (!existeAsignedCourse) {
+        throw new Error(`El ID ${ id } no existe en la base de datos`);
+    }
+}
+
 export const existenteNameCourse = async (name = ' ') => {
 
     const existeName = await Course.findOne({ name });
@@ -85,5 +65,4 @@ export const existenteNameCourse = async (name = ' ') => {
     if (existeName) {
         throw new Error(`El nombre ${ name } ya existe en la base de datos`);
     }
->>>>>>> feature/course
 }

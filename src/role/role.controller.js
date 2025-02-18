@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { response, request } from "express"
-import { hash } from "argon2"
-=======
->>>>>>> feature/student
-=======
-import { response, request } from "express"
-import { hash } from "argon2"
->>>>>>> feature/teacher
-=======
->>>>>>> feature/course
 import Role from "./role.model.js"
 
 export const saveRole = async (req, res) => {

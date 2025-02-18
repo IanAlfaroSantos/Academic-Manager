@@ -10,6 +10,7 @@ import roleRoutes from '../src/role/role.routes.js';
 import teacherRoutes from '../src/teacher/teacher.routes.js'
 import studentRoutes from '../src/student/student.routes.js'
 import courseRoutes from '../src/course/course.routes.js'
+import asignatedCourseRoutes from '../src/asignarCourse/asignedCourse.routes.js'
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -25,6 +26,7 @@ const routes = (app) => {
     app.use("/academicManager/v1/teachers", teacherRoutes);
     app.use("/academicManager/v1/students", studentRoutes);
     app.use("/academicManager/v1/courses", courseRoutes);
+    app.use("/academicManager/v1/asigned", asignatedCourseRoutes);
 };
 
 const conectarDB = async () => {

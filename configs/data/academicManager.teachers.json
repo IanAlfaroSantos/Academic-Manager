@@ -30,9 +30,9 @@
   "role": "TEACHER_ROLE",
   "estado": true,
   "createdAt": {
-    "$date": "2025-02-18T05:31:46.703Z"
+    "$date": "2025-02-17T05:31:46.703Z"
   },
   "updatedAt": {
-    "$date": "2025-02-18T05:31:46.703Z"
+    "$date": "2025-02-17T05:31:46.703Z"
   }
 }]

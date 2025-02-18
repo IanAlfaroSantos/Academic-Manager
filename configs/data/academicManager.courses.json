@@ -6,10 +6,10 @@
   "description": "Idioma español",
   "estado": true,
   "createdAt": {
-    "$date": "2025-02-18T04:48:50.716Z"
+    "$date": "2025-02-17T04:48:50.716Z"
   },
   "updatedAt": {
-    "$date": "2025-02-18T04:48:50.716Z"
+    "$date": "2025-02-17T04:48:50.716Z"
   }
 },
 {
@@ -20,10 +20,10 @@
   "description": "Idioma Ingles",
   "estado": true,
   "createdAt": {
-    "$date": "2025-02-18T04:50:51.441Z"
+    "$date": "2025-02-17T04:50:51.441Z"
   },
   "updatedAt": {
-    "$date": "2025-02-18T04:50:51.441Z"
+    "$date": "2025-02-17T04:50:51.441Z"
   }
 },
 {
@@ -34,10 +34,10 @@
   "description": "Ciencia que estudia la naturaleza",
   "estado": true,
   "createdAt": {
-    "$date": "2025-02-18T04:51:21.144Z"
+    "$date": "2025-02-17T04:51:21.144Z"
   },
   "updatedAt": {
-    "$date": "2025-02-18T04:51:21.144Z"
+    "$date": "2025-02-17T04:51:21.144Z"
   }
 },
 {
@@ -48,10 +48,10 @@
   "description": "Arte clasica y moderna",
   "estado": true,
   "createdAt": {
-    "$date": "2025-02-18T04:51:51.667Z"
+    "$date": "2025-02-17T04:51:51.667Z"
   },
   "updatedAt": {
-    "$date": "2025-02-18T05:39:44.711Z"
+    "$date": "2025-02-17T05:39:44.711Z"
   }
 },
 {
@@ -62,10 +62,10 @@
   "description": "Calculos matematicos",
   "estado": true,
   "createdAt": {
-    "$date": "2025-02-18T04:52:12.586Z"
+    "$date": "2025-02-17T04:52:12.586Z"
   },
   "updatedAt": {
-    "$date": "2025-02-18T14:25:28.124Z"
+    "$date": "2025-02-17T14:25:28.124Z"
   }
 },
 {
@@ -76,9 +76,9 @@
   "description": "Curso de principios eticos",
   "estado": true,
   "createdAt": {
-    "$date": "2025-02-18T04:56:21.087Z"
+    "$date": "2025-02-17T04:56:21.087Z"
   },
   "updatedAt": {
-    "$date": "2025-02-18T14:33:14.606Z"
+    "$date": "2025-02-17T14:33:14.606Z"
   }
 }]

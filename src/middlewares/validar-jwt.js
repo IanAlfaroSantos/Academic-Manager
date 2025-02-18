@@ -1,13 +1,6 @@
 import jwt from 'jsonwebtoken';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Teacher from '../teacher/teacher.model.js';
->>>>>>> feature/teacher
-=======
-import Teacher from '../teacher/teacher.model.js';
->>>>>>> feature/course
 import Student from '../student/student.model.js';
 
 export const validarStudentJWT = async (req, res, next) => {
@@ -47,11 +40,6 @@ export const validarStudentJWT = async (req, res, next) => {
             msg: "Token no válido"
         });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> feature/course
 };
 
 export const validarTeacherJWT = async (req, res, next) => {
@@ -91,8 +79,4 @@ export const validarTeacherJWT = async (req, res, next) => {
             msg: "Token no válido"
         });
     }
-<<<<<<< HEAD
->>>>>>> feature/teacher
-=======
->>>>>>> feature/course
 };
