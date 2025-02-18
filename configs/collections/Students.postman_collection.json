@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "7c3f47c2-81d1-445b-b141-b803c8e2fb71",
+		"name": "Students",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41997069"
+	},
+	"item": [
+		{
+			"name": "Register Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ian\",\r\n    \"surname\": \"Alfaro\",\r\n    \"username\": \"IanAlfaro\",\r\n    \"email\": \"ialfasa2020@gmail.com\",\r\n    \"password\": \"11111111\",\r\n    \"phone\": \"18391239\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/students/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"students",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"IanAlfaro\",\r\n    \"email\": \"ialfasa2020@gmail.com\",\r\n    \"password\": \"11111110\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/students/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"students",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/students?limite=10&desde=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"students"
+					],
+					"query": [
+						{
+							"key": "limite",
+							"value": "10"
+						},
+						{
+							"key": "desde",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/students/findStudent/67ae80b6a30cb14e6b97a7a0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"students",
+						"findStudent",
+						"67ae80b6a30cb14e6b97a7a0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlYWY0NjliNzFjZGMyMDIwODQ5NGUiLCJpYXQiOjE3Mzk3NjMyOTcsImV4cCI6MTczOTc2Njg5N30.yJ0vFgnW9Fi3wZ30rIEGR4pfYtvNKy5uD_nnvnbWgM8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ian\",\r\n    \"surname\": \"Alfaro\",\r\n    \"username\": \"IanAlfaro\",\r\n    \"email\": \"ialfasa2020@gmail.co\",\r\n    \"password\": \"11111112\",\r\n    \"phone\": \"18391232\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/students/67aeaf469b71cdc20208494e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"students",
+						"67aeaf469b71cdc20208494e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FlYWY0NjliNzFjZGMyMDIwODQ5NGUiLCJpYXQiOjE3Mzk3NjMyOTcsImV4cCI6MTczOTc2Njg5N30.yJ0vFgnW9Fi3wZ30rIEGR4pfYtvNKy5uD_nnvnbWgM8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/students/67aeaf469b71cdc20208494e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"students",
+						"67aeaf469b71cdc20208494e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate Student",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYWU1MWI2YzNlNWQ5NWVmNTAyMzQiLCJpYXQiOjE3Mzk3NjM0NzQsImV4cCI6MTczOTc2NzA3NH0.VfRUvoG_i1idlMjLCp3saksIdj3K8Z61uDU8jlvy22I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/students/activate/67aeaf469b71cdc20208494e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"students",
+						"activate",
+						"67aeaf469b71cdc20208494e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYWU1MWI2YzNlNWQ5NWVmNTAyMzQiLCJpYXQiOjE3Mzk3NjM0NzQsImV4cCI6MTczOTc2NzA3NH0.VfRUvoG_i1idlMjLCp3saksIdj3K8Z61uDU8jlvy22I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"11111110\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/academicManager/v1/students/updatePassword/67aeaf469b71cdc20208494e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"academicManager",
+						"v1",
+						"students",
+						"updatePassword",
+						"67aeaf469b71cdc20208494e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
