@@ -7,6 +7,7 @@ import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import limiter from '../src/middlewares/validar-cant-peticiones.js';
 import roleRoutes from '../src/role/role.routes.js';
+import teacherRoutes from '../src/teacher/teacher.routes.js'
 import studentRoutes from '../src/student/student.routes.js'
 
 const middlewares = (app) => {
@@ -20,6 +21,7 @@ const middlewares = (app) => {
 
 const routes = (app) => {
     app.use("/academicManager/v1/roles", roleRoutes);
+    app.use("/academicManager/v1/teachers", teacherRoutes);
     app.use("/academicManager/v1/students", studentRoutes);
 };
 
