@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "67b41132067b251b302329cd"
+  },
+  "name": "idioma español",
+  "description": "Idioma español",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-18T04:48:50.716Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T04:48:50.716Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b411ab067b251b302329d8"
+  },
+  "name": "idioma ingles",
+  "description": "Idioma Ingles",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-18T04:50:51.441Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T04:50:51.441Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b411c9067b251b302329dc"
+  },
+  "name": "ciencias naturales",
+  "description": "Ciencia que estudia la naturaleza",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-18T04:51:21.144Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T04:51:21.144Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b411e7067b251b302329e0"
+  },
+  "name": "artistica",
+  "description": "Arte clasica y moderna",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-18T04:51:51.667Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T05:39:44.711Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b411fc067b251b302329e4"
+  },
+  "name": "matematicas",
+  "description": "Calculos matematicos",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-18T04:52:12.586Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T14:25:28.124Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b412f50f0637961cd89ef6"
+  },
+  "name": "etica",
+  "description": "Curso de principios eticos",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-18T04:56:21.087Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T14:33:14.606Z"
+  }
+}]
