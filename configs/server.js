@@ -5,6 +5,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
+import roleRoutes from '../src/role/role.routes.js';
+
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
     app.use(cors());
@@ -14,7 +16,7 @@ const middlewares = (app) => {
 }
 
 const routes = (app) => {
-
+    app.use("/academicManager/v1/roles", roleRoutes);
 };
 
 const conectarDB = async () => {
