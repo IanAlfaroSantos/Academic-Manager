@@ -160,6 +160,14 @@ export const updateTeacher = async (req, res = response) => {
         const { _id, password, email, role, ...data } = req.body;
         let { username } = req.body;
 
+        await Teacher.findById(id);
+        if (req.teacher.id !== id) {
+            return res.status(400).json({
+                success: false,
+                msg: "Usted no tiene permisos para editar un perfil que no es suyo"
+            })
+        }
+
         if (username) {
             username = username.toLowerCase();
             data.username = username;
@@ -196,6 +204,14 @@ export const updatePassword = async (req, res = response) => {
             var newPassword = await hash(password);
         }
 
+        await Teacher.findById(id);
+        if (req.teacher.id !== id) {
+            return res.status(400).json({
+                success: false,
+                msg: "Usted no tiene permisos para editar un perfil que no es suyo"
+            })
+        }
+
         const teacher = await Teacher.findByIdAndUpdate(id, { password: newPassword }, { new: true });
 
         res.status(200).json({
@@ -217,6 +233,14 @@ export const deleteTeacher = async (req, res = response) => {
     try {
         
         const { id } = req.params;
+
+        await Teacher.findById(id);
+        if (req.teacher.id !== id) {
+            return res.status(400).json({
+                success: false,
+                msg: "Usted no tiene permisos para eliminar un perfil que no es suyo"
+            })
+        }
 
         const teacher = await Teacher.findByIdAndUpdate(id, { estado: false }, { new: true });
 
