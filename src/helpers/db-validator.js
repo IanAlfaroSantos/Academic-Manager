@@ -3,20 +3,12 @@ import Teacher from '../teacher/teacher.model.js';
 import Course from '../course/course.model.js';
 import AsignedCourse from '../asignarCourse/asignedCourse.model.js';
 
-export const existenteEmailStudent = async (email = ' ') => {
+export const existenteEmail = async (email = ' ') => {
 
-    const existeEmail = await Student.findOne({ email });
+    const existeStudentEmail = await Student.findOne({ email });
+    const existeTeacherEmail = await Teacher.findOne({ email });
 
-    if (existeEmail) {
-        throw new Error(`El email ${ email } ya existe en la base de datos`);
-    }
-}
-
-export const existenteEmailTeacher = async (email = ' ') => {
-    
-    const existeEmail = await Teacher.findOne({ email });
-    
-    if (existeEmail) {
+    if (existeTeacherEmail || existeStudentEmail) {
         throw new Error(`El email ${ email } ya existe en la base de datos`);
     }
 }

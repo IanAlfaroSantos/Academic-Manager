@@ -4,7 +4,7 @@ import { existeStudentById } from "../helpers/db-validator.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarStudentJWT } from "../middlewares/validar-jwt.js";
 import { login, register, getStudents, getStudentById, updateStudent, updatePassword, deleteStudent, activateStudent } from "./student.controller.js";
-import { registerValidatorStudent, loginValidator } from '../middlewares/validator.js';
+import { registerValidator, loginValidator } from '../middlewares/validator.js';
 import { deleteFileOnError } from '../middlewares/delete-file-on-error.js';
 
 const router = Router();
@@ -18,7 +18,7 @@ router.post(
 
 router.post(
     '/register',
-    registerValidatorStudent,
+    registerValidator,
     deleteFileOnError,
     register
 );
