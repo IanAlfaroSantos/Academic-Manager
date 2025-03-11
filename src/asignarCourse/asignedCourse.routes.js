@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { check } from "express-validator"
-import { existeAsignedCourseById } from "../helpers/db-validator.js";
+import { existeAsignedCourseById, existeStudentOrTeacher } from "../helpers/db-validator.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
-import { validarTeacherJWT, validarStudentJWT } from "../middlewares/validar-jwt.js";
+import { validarTeacherJWT, validarStudentJWT, validarJWTStudentOrTeacher } from "../middlewares/validar-jwt.js";
 import { saveAsignedStudent, saveAsignedTeacher, getAsigned, getAsignedCourseById, getCoursesById, updateAsignedCourse } from "./asignedCourse.controller.js";
 
 const router = Router();
@@ -47,9 +47,9 @@ router.get(
 router.get(
     '/courses/:id',
     [
+        validarJWTStudentOrTeacher,
         check('id', 'No es ID válido').isMongoId(),
-        check('role', 'El parámetro role es obligatorio').not().isEmpty(),
-        check('role').isIn(['STUDENT_ROLE', 'TEACHER_ROLE']).withMessage('El parámetro role debe ser "STUDENT_ROLE" o "TEACHER_ROLE"'),
+        check('id').custom(existeStudentOrTeacher),
         validarCampos
     ],
     getCoursesById

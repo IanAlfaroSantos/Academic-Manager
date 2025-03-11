@@ -32,6 +32,15 @@ export const existeStudentById = async (id = '') => {
     }
 }
 
+export const existeStudentOrTeacher = async (id) => {
+    const existeStudent = await Student.findById(id);
+    const existeTeacher = await Teacher.findById(id);
+
+    if (!existeStudent && !existeTeacher) {
+        throw new Error(`El ID ${ id } no existe en la base de datos`);
+    }
+}
+
 export const existeCourseById = async (id = '') => {
     
     const existeCourse = await Course.findById(id);

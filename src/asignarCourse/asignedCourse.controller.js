@@ -220,42 +220,69 @@ export const getAsignedCourseById = async (req, res) => {
 export const getCoursesById = async (req, res) => {
     try {
         const { id } = req.params;
-        const { role } = req.query; // role puede ser 'student' o 'teacher'
+        const teacher = req.teacher;
+        const student = req.student;
 
-        // Verificar que se haya pasado el role
-        if (!role || (role !== 'STUDENT_ROLE' && role !== 'TEACHER_ROLE')) {
-            return res.status(400).json({
-                success: false,
-                message: 'Debe especificar un rol: "STUDENT_ROLE" o "TEACHER_ROLE"'
-            });
-        }
-
-        let query = {};
-        if (role === 'STUDENT_ROLE') {
-            query.student = id; // Si el rol es 'student', buscamos por student
-        } else if (role === 'TEACHER_ROLE') {
-            query.teacher = id; // Si el rol es 'teacher', buscamos por teacher
-        }
-
-        // Buscar todos los cursos asignados a este estudiante o profesor
-        const asignedCourses = await AsignedCourse.find(query);
-
-        if (asignedCourses.length === 0) {
+        if (!teacher && !student) {
             return res.status(404).json({
                 success: false,
-                message: `No se encontraron cursos asignados para este ${role}`
+                msg: "El usuario no es ni un estudiante ni un profesor"
             });
         }
 
-        // Obtener los cursos asociados sin usar populate, solo los campos necesarios
-        const courses = asignedCourses.map((asignedCourse) => ({
-            courseId: asignedCourse.course.toString(), // Convertir ObjectId a string si es necesario
-            courseName: asignedCourse.name
-        }));
+        if (student && student._id.toString() !== id || teacher && teacher._id.toString() !== id) {
+            return res.status(400).json({
+                success: false,
+                msg: "No tiene permisos para ver cursos de alguien más"
+            });
+        }
 
-        res.status(200).json({
-            success: true,
-            courses
+        if (student && student.role === "STUDENT_ROLE") {
+            const asignedCourses = await AsignedCourse.find({ student: student._id });
+
+            if (asignedCourses.length === 0) {
+                return res.status(404).json({
+                    success: false,
+                    message: 'No se encontraron cursos asignados para este estudiante'
+                });
+            }
+
+            const courses = asignedCourses.map((asignedCourse) => ({
+                courseId: asignedCourse.course.toString(),
+                courseName: asignedCourse.name
+            }));
+
+            return res.status(200).json({
+                success: true,
+                total: asignedCourses.length,
+                courses
+            });
+
+        } else if (teacher && teacher.role === "TEACHER_ROLE") {
+            const asignedCourses = await AsignedCourse.find({ teacher: teacher._id });
+
+            if (asignedCourses.length === 0) {
+                return res.status(404).json({
+                    success: false,
+                    message: 'No se encontraron cursos asignados para este profesor'
+                });
+            }
+
+            const courses = asignedCourses.map((asignedCourse) => ({
+                courseId: asignedCourse.course.toString(),
+                courseName: asignedCourse.name
+            }));
+
+            return res.status(200).json({
+                success: true,
+                total: asignedCourses.length,
+                courses
+            });
+        }
+
+        return res.status(400).json({
+            success: false,
+            msg: "Rol no válido"
         });
 
     } catch (error) {
@@ -263,11 +290,10 @@ export const getCoursesById = async (req, res) => {
         res.status(500).json({
             success: false,
             message: 'Error al obtener los cursos asignados',
-            error: error.message || error
+            error
         });
     }
 };
-
 
 export const updateAsignedCourse = async (req, res = response) => {
     try {
